@@ -1,0 +1,121 @@
+.h1{
+      position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    /* align-items: center; */
+    gap: 10px;
+    text-align: center;
+
+        }
+        
+        .logo{
+            background-image: url("https://tse3.mm.bing.net/th/id/OIP.EwcPDthDvYUttQANflq8mwHaD3?pid=Api&P=0&h=180");
+            width: 150px;
+            height: 100px;
+            padding: 1px,8px,0px,6px;
+        }
+        .search{
+padding: 10px,4px,10px,3px;
+border-radius: 5px;
+margin: 10px;
+width: 600px;
+height: 50px;
+font: 14px;
+        }
+        .locationlogo{
+            width: 20px;
+            height: 20px;
+        }
+
+       .gallery {
+    margin-top: 120px;   /* because header is fixed */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 boxes */
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    border: 2px solid #232222;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-box {
+    width: 100%;
+    /* height: px; */
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section {
+    margin-top: 140px; /* because header is fixed */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background: #e3e6e6;
+}
+
+.box {
+    background: white;
+    padding: 15px;
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.box-grid img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.box-grid p {
+    font-size: 14px;
+}
+.navbar{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    gap: 40px;
+}
+.navbar a{
+    color: white;
+    
+}
+.cart
+{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+.footer{
+    background: black;
+    color: white;
+   /* margin: 100px; */
+     /* height:50px; */
+     width: 1400px;
+    text-align:center;
+}
+.bottom{
+    display: flex;
+    gap:80px;
+    background-color:#070c23;
+    font-size: 20px;
+    color: white;
+    padding: 1px;
+}
+
+
