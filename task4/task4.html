@@ -1,0 +1,96 @@
+task4 .html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+      input{
+        width: 500px;
+       
+      }
+      .sub{
+        margin-top: 20px;
+      }
+      .form{
+        background-color: aqua;
+        width: 550px;
+        border-color: black;
+        justify-content: center;
+      }
+      .sub{
+        background-color: green;
+        border-radius: 50px;
+      }
+      .image{
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+</head>
+
+<body> 
+    <div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr58J7qv-2oH8xk7A0-O1JyRi1khhwbCKEUA&s" alt="" class="image">
+    
+    <h1 style="color: blue ; "> Registration Form   </h1>
+    <form action="#" target="_blank" id="myForm">
+    
+        
+    <label ><strong>First Name</strong></label><br>
+    <input  type="text" id="firstname" placeholder="enetr your first name" pattern="[^0-9]+" title="please enter valid first name"> <br>
+    <span class="error" id="nameError"></span>
+
+       
+    <label><strong>Last Name</strong></label><br>
+    <input   type="text" id="lastname" placeholder="enter your last name" > <br>
+    <span class="error" id="nameError"></span>
+    
+    <label><strong>Email</strong></label><br>
+    <input   type="text" id="email" placeholder="enter your email id" pattern="^[^@]+@[^@]+\.[^@]+$"><br>
+    <span class="error" id="nameError"></span><br>
+
+
+    <label> <strong>Password</strong></label><br>
+    <input type="number" id="password" placeholder="entert your password"> <br>
+    <span class="error" id="nameError"></span><br>
+
+
+    <label> <strong>Mobile Number</strong></label><br>
+    <input type="number" id="mobilenumber" placeholder="entert your mobile number"> <br>
+    <span class="error" id="nameError"></span><br>
+
+
+    <label> <strong>Date of birth </strong></label><br>
+    <input type="date"   id="dob" placeholder="enter date (yyyy//mm/dd)"> <br>
+    
+    <input class="sub" type="submit">
+    
+  </form>
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // stops form submission
+  
+      let name = document.getElementById("firstname").value;
+      let email = document.getElementById("email").value;
+      const regex = /\d/;
+
+      if (name === "" || regex.test(name)) {
+        alert("Name is required");
+        return;
+      }
+  
+      if (!email.includes("@")) {
+        alert("Please enter a valid email");
+        return;
+      }
+  
+      alert("Form submitted successfully!");
+    }
+);
+  </script>
+    </div>
+</body>
+</html>
