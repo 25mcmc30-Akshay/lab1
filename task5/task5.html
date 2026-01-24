@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My To-Do App</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <input type="date" id="dateInput">
+    <button onclick="addTask()">Add</button>
+
+    <br><br>
+    <button onclick="showAll()">All</button>
+    <button onclick="showDone()">Completed</button>
+    <button onclick="showPending()">Pending</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    let tasks = [];
+
+    function addTask() {
+        let text = taskInput.value;
+        let date = dateInput.value;
+
+        if (text === "") return;
+
+        let task = {
+            name: text,
+            due: date,
+            completed: false
+        };
+
+        tasks.push(task);
+        taskInput.value = "";
+        dateInput.value = "";
+
+        sortTasks();
+        display(tasks);
+    }
+
+    function display(list) {
+        taskList.innerHTML = "";
+
+        list.forEach((task, index) => {
+            let li = document.createElement("li");
+
+            let span = document.createElement("span");
+            span.innerText = task.name + " (" + task.due + ")";
+            if (task.completed) span.classList.add("done");
+
+            span.onclick = function () {
+                task.completed = !task.completed;
+                display(tasks);
+            };
+
+            let del = document.createElement("button");
+            del.innerText = "X";
+            del.onclick = function () {
+                tasks.splice(index, 1);
+                display(tasks);
+            };
+
+            li.appendChild(span);
+            li.appendChild(del);
+            taskList.appendChild(li);
+        });
+    }
+
+    function showAll() {
+        display(tasks);
+    }
+
+    function showDone() {
+        let done = tasks.filter(t => t.completed);
+        display(done);
+    }
+
+    function showPending() {
+        let pending = tasks.filter(t => !t.completed);
+        display(pending);
+    }
+
+    function sortTasks() {
+        tasks.sort((a, b) => new Date(a.due) - new Date(b.due));
+    }
+</script>
+
+</body>
+</html>
