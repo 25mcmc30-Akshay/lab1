@@ -1,0 +1,154 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App container */
+.app {
+  background: #ffffff;
+  width: 420px;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+/* Add button */
+#addBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#addBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  margin-top: 18px;
+}
+
+/* Each task */
+li {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.01);
+}
+
+/* Task text */
+li span {
+  display: block;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Completed task */
+.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* Buttons inside task */
+.task-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.task-buttons button {
+  flex: 1;
+  padding: 6px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Button colors */
+.task-buttons button:nth-child(1) {
+  background: #22c55e;
+  color: white;
+}
+
+.task-buttons button:nth-child(2) {
+  background: #eab308;
+  color: black;
+}
+
+.task-buttons button:nth-child(3) {
+  background: #3b82f6;
+  color: white;
+}
+
+.task-buttons button:nth-child(4) {
+  background: #ef4444;
+  color: white;
+}
+
+/* Hover effects */
+.task-buttons button:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
