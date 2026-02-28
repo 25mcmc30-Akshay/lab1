@@ -1,0 +1,21 @@
+{
+  "fields": [
+    { "type": "text", "label": "Name", "id": "name", "required": true },
+    { "type": "email", "label": "Email", "id": "email", "required": true },
+    { "type": "password", "label": "Password", "id": "password", "required": true },
+    { 
+      "type": "select",
+      "label": "Country",
+      "id": "country",
+      "required": true,
+      "options": ["Select", "USA", "India", "Canada"]
+    },
+    {
+      "type": "select",
+      "label": "Role",
+      "id": "role",
+      "required": true,
+      "options": ["Select", "Student", "Professional"]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom jQuery Tabs Plugin</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="tabs" id="myTabs">
+
+    <ul class="tab-nav">
+        <li data-tab="home">Home</li>
+        <li data-tab="about">About</li>
+        <li data-tab="contact">Contact</li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-panel">
+            <h2>Home</h2>
+            <p>Welcome to our website. This is the home section.</p>
+        </div>
+
+        <div id="about" class="tab-panel">
+            <h2>About</h2>
+            <p>This section contains information about us.</p>
+        </div>
+
+        <div id="contact" class="tab-panel">
+            <h2>Contact</h2>
+            <p>You can contact us via email or phone.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="jquery.tabs.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#myTabs").simpleTabs({
+            activeClass: "active-tab",
+            animationSpeed: 400,
+            defaultTab: "home"
+        });
+    });
+</script>
+
+</body>
+</html>

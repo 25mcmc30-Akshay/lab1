@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    padding: 40px;
+    background: #f4f6f9;
+}
+
+.tabs {
+    width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tab-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-nav li {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #eee;
+    margin-right: 5px;
+}
+
+.tab-nav li.active-tab {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.tab-panel {
+    display: none;
+    padding: 15px 0;
+}
