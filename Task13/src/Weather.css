@@ -1,0 +1,40 @@
+.weather-container{
+  max-width:800px;
+  margin:auto;
+}
+
+.search-box{
+  display:flex;
+  justify-content:center;
+  margin-bottom:20px;
+}
+
+.search-box input{
+  padding:10px;
+  width:250px;
+  border-radius:5px;
+  border:none;
+}
+
+.search-box button{
+  padding:10px 15px;
+  margin-left:10px;
+  border:none;
+  background:orange;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.weather-card{
+  background:white;
+  color:black;
+  padding:20px;
+  border-radius:10px;
+  width:250px;
+  margin:auto;
+}
+
+.error{
+  color:red;
+}

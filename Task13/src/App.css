@@ -1,0 +1,11 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(to right,#4facfe,#00f2fe);
+}
+
+.app{
+  text-align:center;
+  padding:30px;
+  color:white;
+}
